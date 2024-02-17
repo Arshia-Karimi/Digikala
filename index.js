@@ -1,7 +1,7 @@
 const form1 = document.getElementById("form1");
 const form2 = document.getElementById("form2");
 const phone = document.getElementById("phone");
-const input = document.getElementById("aer");
+const input = document.getElementById("codeInput");
 const description = document.getElementById("description");
 
 let error;
@@ -15,7 +15,7 @@ const setError = (elementId, message) => {
   element.innerText = message;
 };
 
-input.addEventListener("input", function (e) {
+input.addEventListener("input", function () {
   var foo = this.value.split("-").join("");
   if (foo.length > 0) {
     foo = foo.match(new RegExp(".{1,1}", "g")).join("-");
@@ -26,10 +26,12 @@ input.addEventListener("input", function (e) {
 form1.addEventListener("submit", (e) => {
   e.preventDefault();
   phonevalidate();
+  const startNumber = phone.value.substring(0, 4);
+  const endNumber = phone.value.substring(7, 11);
   if (!error) {
     form1.classList.add("hide");
     form2.classList.remove("hide");
-    description.innerText = `کد تایید برای شماره ${phone.value} پیامک شد`;
+    description.innerText = `کد تایید برای شماره ${endNumber} *** ${startNumber}پیامک شد`;
   }
 });
 
