@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Digikala</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.svg" alt="" />
+      <form id="form1">
+        <h3 class="title1">ورود | ثبت نام</h3>
+        <p class="description1">
+          سلام!
+          <br />
+          لطفا شماره موبایل یا ایمیل خود را وارد کنید
+        </p>
+        <input type="number" class="phoneInput input1" id="phone" />
+        <span class="error" id="phoneError"></span>
+        <button type="submit" class="formButton1">ورود</button>
+        <p class="p1">
+          ورود شما به معنای پذیرش شرایط دیجی‌کالا و قوانین حریم‌ خصوصی است
+        </p>
+      </form>
+
+      <form id="form2" class="hide">
+        <h3 class="title1">کد تایید را وارد کنید</h3>
+        <p class="p2" id="description"></p>
+        <input type="text" class="input2" id="a" />
+        <p class="p2">دریافت مجدد از طریق پیامک > یا تماس></p>
+        <button type="submit" class="formButton1">تایید</button>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
