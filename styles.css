@@ -74,7 +74,7 @@ img {
   outline: 0;
 }
 
-.phoneInput::-webkit-outer-spin-button,
+.phoneInput::-webkit-outer-spin,
 .phoneInput::-webkit-inner-spin-button {
   display: none;
 }
